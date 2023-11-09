@@ -55,7 +55,7 @@ const relative = (url: string) => {
 };
 
 const WIDTH = 200;
-const HEIGHT = 279;
+const HEIGHT = 200;
 
 function ProductCard(
   { product, preload, itemListName, layout, platform }: Props,
@@ -94,9 +94,10 @@ function ProductCard(
   ));
   const cta = (
     <a
-      href={url && relative(url)}
+      href={`https://www.espacosmart.com.br${relative(url)}`}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block wdt-spot-cta"
+      target="_blank"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -105,7 +106,7 @@ function ProductCard(
   return (
     <div
       id={id}
-      class={`card card-compact group w-full ${
+      class={`card card-compact group w-full wdt-spot ${
         align === "center" ? "text-center" : "text-start"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
@@ -159,9 +160,10 @@ function ProductCard(
         </div>
         {/* Product Images */}
         <a
-          href={url && relative(url)}
+          href={`https://www.espacosmart.com.br${relative(url)}`}
           aria-label="view product"
-          class="grid grid-cols-1 grid-rows-1 w-full"
+          class="grid grid-cols-1 grid-rows-1 w-full wdt-spot-image-wrapper"
+          target="_blank"
         >
           <Image
             src={front.url!}
@@ -178,7 +180,7 @@ function ProductCard(
             loading={preload ? "eager" : "lazy"}
             decoding="async"
           />
-          {(!l?.onMouseOver?.image ||
+          {/* {(!l?.onMouseOver?.image ||
             l?.onMouseOver?.image == "Change image") && (
             <Image
               src={back?.url ?? front.url!}
@@ -190,7 +192,7 @@ function ProductCard(
               loading="lazy"
               decoding="async"
             />
-          )}
+          )} */}
         </a>
         <figcaption
           class={`
@@ -210,7 +212,7 @@ function ProductCard(
         </figcaption>
       </figure>
       {/* Prices & Name */}
-      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4">
+      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4 wdt-spot-information">
         {/* SKU Selector */}
         {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
@@ -233,20 +235,20 @@ function ProductCard(
             <div class="flex flex-col gap-0">
               {l?.hide?.productName ? "" : (
                 <h2
-                  class="truncate text-base lg:text-lg text-base-content"
+                  class="truncate text-base lg:text-lg text-base-content wdt-spot-name"
                   dangerouslySetInnerHTML={{ __html: name ?? "" }}
                 />
               )}
               {l?.hide?.productDescription ? "" : (
                 <div
-                  class="truncate text-sm lg:text-sm text-neutral"
+                  class="truncate text-sm lg:text-sm text-neutral wdt-spot-description"
                   dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
               )}
             </div>
           )}
         {l?.hide?.allPrices ? "" : (
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col">
             <div
               class={`flex flex-col gap-0 ${
                 l?.basics?.oldPriceSize === "Normal"
@@ -254,21 +256,21 @@ function ProductCard(
                   : ""
               } ${align === "center" ? "justify-center" : "justify-start"}`}
             >
-              <div
+              {/* <div
                 class={`line-through text-base-300 text-xs ${
                   l?.basics?.oldPriceSize === "Normal" ? "lg:text-xl" : ""
                 }`}
               >
                 {formatPrice(listPrice, offers?.priceCurrency)}
-              </div>
-              <div class="text-accent text-base lg:text-xl">
+              </div> */}
+              <div class="text-accent text-base lg:text-xl wdt-spot-price">
                 {formatPrice(price, offers?.priceCurrency)}
               </div>
             </div>
             {l?.hide?.installments
               ? ""
               : (
-                <div class="text-base-300 text-sm lg:text-base truncate">
+                <div class="text-base-300 text-sm lg:text-base truncate wdt-spot-installments">
                   ou {installments}
                 </div>
               )}

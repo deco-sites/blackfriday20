@@ -105,7 +105,7 @@ function CampaignTimer({
 
   return (
     <>
-      <div class="bg-accent text-accent-content">
+      <div class="bg-accent text-accent-content wdt-counter-wrap">
         <div class="container mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-16 py-4 px-6 gap-4 ">
           {layout?.textPosition !== "After counter" &&
             (
@@ -160,7 +160,7 @@ function CampaignTimer({
             >
             </div>
             <a
-              class="btn"
+              class="btn wdt-counter-button"
               aria-label={link.text}
               href={link.href}
             >

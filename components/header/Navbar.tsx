@@ -13,6 +13,8 @@ import Image from "apps/website/components/Image.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 
+var LogoImage =  "/image/logo-combackground-forma.png"
+
 function Navbar({ items, searchbar, logo }: {
   items: INavItem[];
   searchbar?: SearchbarProps;
@@ -27,7 +29,7 @@ function Navbar({ items, searchbar, logo }: {
         style={{ height: navbarHeight }}
         class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
       >
-        <MenuButton />
+        {/* <MenuButton /> */}
 
         {logo && (
           <a
@@ -36,34 +38,36 @@ function Navbar({ items, searchbar, logo }: {
             style={{ minHeight: navbarHeight }}
             aria-label="Store logo"
           >
-            <Image src={logo.src} alt={logo.alt} width={126} height={16} />
+            {/* <Image src={logo.src} alt={logo.alt} width={126} height={16} /> */}
+            <Image src="https://lojaespacosmart.vtexassets.com/assets/vtex.file-manager-graphql/images/b775590a-208b-4495-8f12-70e5a6834714___7dd9689aa4e0fb614c347971ac61dac6.jpg" alt={logo.alt} width={126} height={16} />
           </a>
         )}
 
-        <div class="flex gap-1">
+        {/* <div class="flex gap-1">
           <SearchButton />
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
-        </div>
+        </div> */}
       </div>
 
       {/* Desktop Version */}
       <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
-        <div class="flex-none w-44">
+        <div class="flex-none wdt-logo-wrap">
           {logo && (
             <a
               href="/"
               aria-label="Store logo"
-              class="block px-4 py-3 w-[160px]"
+              class="block px-4 py-3"
             >
-              <Image src={logo.src} alt={logo.alt} width={126} height={16} />
+              {/* <Image src={logo.src} alt={logo.alt} width={126} height={16} /> */}
+              <Image src={LogoImage} alt={logo.alt} />
             </a>
           )}
         </div>
-        <div class="flex-auto flex justify-center">
+        {/* <div class="flex-auto flex justify-center">
           {items.map((item) => <NavItem item={item} />)}
-        </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
+        </div> */}
+        {/* <div class="flex-none w-44 flex items-center justify-end gap-2">
           <SearchButton />
           <Searchbar searchbar={searchbar} />
           <a
@@ -90,7 +94,7 @@ function Navbar({ items, searchbar, logo }: {
           {platform === "wake" && <CartButtonWake />}
           {platform === "linx" && <CartButtonLinx />}
           {platform === "shopify" && <CartButtonShopify />}
-        </div>
+        </div> */}
       </div>
     </>
   );

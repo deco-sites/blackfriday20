@@ -34,14 +34,14 @@ function Header({
 
   return (
     <>
-      <header style={{ height: headerHeight }}>
+      <header class="wdt-header">
         <Drawers
           menu={{ items }}
           searchbar={searchbar}
           platform={platform}
         >
           <div class="bg-base-100 fixed w-full z-50">
-            <Alert alerts={alerts} />
+            {/* <Alert alerts={alerts} /> */}
             <Navbar
               items={items}
               searchbar={searchbar && { ...searchbar, platform }}
