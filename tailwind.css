@@ -139,7 +139,7 @@
 }
 
 .wdt-spot .wdt-spot-price {
-  padding: 16px 0 1;
+  padding: 16px 0 0;
   color: #f18637;
   font-size: 16px;
   font-weight: 700;
@@ -177,4 +177,5 @@
 
 .wdt-footer{
   background: #f8f8f8;
+  display: none;
 }

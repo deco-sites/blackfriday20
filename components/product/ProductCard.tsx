@@ -214,7 +214,7 @@ function ProductCard(
       {/* Prices & Name */}
       <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4 wdt-spot-information">
         {/* SKU Selector */}
-        {(!l?.elementsPositions?.skuSelector ||
+        {/* {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
           <>
             {l?.hide?.skuSelector ? "" : (
@@ -227,7 +227,7 @@ function ProductCard(
               </ul>
             )}
           </>
-        )}
+        )} */}
 
         {l?.hide?.productName && l?.hide?.productDescription
           ? ""
