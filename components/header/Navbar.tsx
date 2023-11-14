@@ -25,11 +25,11 @@ function Navbar({ items, searchbar, logo }: {
   return (
     <>
       {/* Mobile Version */}
-      <div
+      {/* <div
         style={{ height: navbarHeight }}
         class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
       >
-        {/* <MenuButton /> */}
+        <MenuButton />
 
         {logo && (
           <a
@@ -38,20 +38,20 @@ function Navbar({ items, searchbar, logo }: {
             style={{ minHeight: navbarHeight }}
             aria-label="Store logo"
           >
-            {/* <Image src={logo.src} alt={logo.alt} width={126} height={16} /> */}
+            <Image src={logo.src} alt={logo.alt} width={126} height={16} />
             <Image src="https://lojaespacosmart.vtexassets.com/assets/vtex.file-manager-graphql/images/b775590a-208b-4495-8f12-70e5a6834714___7dd9689aa4e0fb614c347971ac61dac6.jpg" alt={logo.alt} width={126} height={16} />
           </a>
         )}
 
-        {/* <div class="flex gap-1">
+        <div class="flex gap-1">
           <SearchButton />
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
-        </div> */}
-      </div>
+        </div>
+      </div> */}
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
         <div class="flex-none wdt-logo-wrap">
           {logo && (
             <a

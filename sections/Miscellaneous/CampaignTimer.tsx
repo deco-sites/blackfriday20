@@ -121,8 +121,8 @@ function CampaignTimer({
           >
             {labels?.expired || "Expired!"}
           </div>
-          <div class="flex gap-8 lg:gap-16 items-center justify-center lg:justify-normal">
-            <div id={`${id}::counter`}>
+          <div class="flex gap-8 lg:gap-16 items-center justify-center lg:justify-normal wdt-counter-wrapper">
+            <div id={`${id}::counter`} class="wdt-counter">
               <div class="grid grid-flow-col gap-3 text-center auto-cols-max items-center">
                 <div class="flex flex-col text-xs lg:text-sm">
                   <span class="countdown font-normal text-xl lg:text-2xl">

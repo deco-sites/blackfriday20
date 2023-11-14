@@ -67,12 +67,12 @@ function ProductShelf({
         </Slider>
 
         <>
-          <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
+          <div class="hidden relative sm:block z-10 col-start-1 row-start-3 wdt-shelf-navButton-wrapper">
             <Slider.PrevButton class="btn btn-circle btn-outline absolute right-1/2 bg-base-100 wdt-shelf-navButton wdt-shelf-prevButton">
               <Icon size={24} id="ChevronLeft" strokeWidth={3} />
             </Slider.PrevButton>
           </div>
-          <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
+          <div class="hidden relative sm:block z-10 col-start-3 row-start-3 wdt-shelf-navButton-wrapper">
             <Slider.NextButton class="btn btn-circle btn-outline absolute left-1/2 bg-base-100 wdt-shelf-navButton wdt-shelf-nextButton">
               <Icon size={24} id="ChevronRight" strokeWidth={3} />
             </Slider.NextButton>

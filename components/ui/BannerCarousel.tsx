@@ -102,14 +102,14 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     >
       <Picture preload={lcp}>
         <Source
-          media="(max-width: 767px)"
+          media="(max-width: 1023px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
           width={360}
           height={600}
         />
         <Source
-          media="(min-width: 768px)"
+          media="(min-width: 1024px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
           width={1440}
@@ -157,7 +157,7 @@ function Dots({ images, interval = 0 }: Props) {
             <Slider.Dot index={index}>
               <div class="py-5">
                 <div
-                  class="w-16 sm:w-20 h-0.5 rounded group-disabled:animate-progress bg-gradient-to-r from-base-100 from-[length:var(--dot-progress)] to-[rgba(255,255,255,0.4)] to-[length:var(--dot-progress)]"
+                  class="w-16 sm:w-20 h-0.5 rounded group-disabled:animate-progress bg-gradient-to-r from-base-100 from-[length:var(--dot-progress)] to-[rgba(255,255,255,0.4)] to-[length:var(--dot-progress)] wdt-banner-dots"
                   style={{ animationDuration: `${interval}s` }}
                 />
               </div>
@@ -173,7 +173,7 @@ function Buttons() {
   return (
     <>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="btn btn-circle glass">
+        <Slider.PrevButton class="btn btn-circle glass wdt-banner-navButton">
           <Icon
             class="text-base-100"
             size={24}
@@ -183,7 +183,7 @@ function Buttons() {
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="btn btn-circle glass">
+        <Slider.NextButton class="btn btn-circle glass wdt-banner-navButton">
           <Icon
             class="text-base-100"
             size={24}
